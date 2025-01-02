@@ -1,0 +1,73 @@
+Game #,Date,Home,Home Score,Away,Away Score,Rink,Time,Overtime?,Matchup
+1,9/14/2024,William Paterson University,1,Villanova University,6,Ice Vault Arena (NJ),Final,0,1
+2,9/27/2024,Villanova University,4,George Mason University,5,Hatfield Ice Arena (PA),Final,1,1
+3,9/27/2024,Towson University,4,William Paterson University,3,Ice World (MD),Final,1,1
+4,9/28/2024,William Paterson University,6,Towson University,3,Ice Vault Arena (NJ),Final,0,2
+5,10/6/2024,Lehigh University,3,Villanova University,7,Steel Ice Center (PA),Final,0,1
+6,10/11/2024,Temple University,5,William Paterson University,2,Northeast Skate Zone (PA),Final,0,1
+7,10/11/2024,New York University,2,United States Naval Academy,5,Sky Rink at Chelsea Piers (NY),Final,0,1
+8,10/12/2024,New York University,2,United States Naval Academy,3,Sky Rink at Chelsea Piers (NY),Final,0,2
+9,10/12/2024,Temple University,2,Lehigh University,3,Northeast Skate Zone (PA),Final,1,1
+10,10/18/2024,Towson University,0,West Chester University,4,Ice World (MD),Final,0,1
+11,10/18/2024,Lehigh University,3,New York University,5,Steel Ice Center (PA),Final,0,1
+12,10/19/2024,Towson University,4,Temple University,2,Ice World (MD),Final,0,1
+13,10/19/2024,New York University,2,Lehigh University,3,Sky Rink at Chelsea Piers (NY),Final,0,2
+14,10/19/2024,George Mason University,2,West Chester University,0,Prince William Ice Center (VA),Final,0,1
+15,10/25/2024,William Paterson University,1,George Mason University,11,Ice Vault Arena (NJ),Final,0,1
+16,10/25/2024,Lehigh University,3,United States Naval Academy,0,Steel Ice Center (PA),Final,0,1
+17,10/26/2024,Lehigh University,3,George Mason University,5,Steel Ice Center (PA),Final,0,1
+18,10/26/2024,William Paterson University,3,United States Naval Academy,5,Ice Vault Arena (NJ),Final,0,1
+19,11/1/2024,Villanova University,2,United States Naval Academy,1,Hatfield Ice Arena (PA),Final,0,1
+20,11/1/2024,Towson University,3,George Mason University,4,Ice World (MD),Final,0,1
+21,11/1/2024,William Paterson University,2,West Chester University,6,Ice Vault Arena (NJ),Final,0,1
+22,11/2/2024,Villanova University,4,William Paterson University,2,Hatfield Ice Arena (PA),Final,0,2
+23,11/2/2024,George Mason University,4,Towson University,2,Prince William Ice Center (VA),Final,0,2
+24,11/2/2024,Temple University,1,United States Naval Academy,3,Northeast Skate Zone (PA),Final,0,1
+25,11/8/2024,Villanova University,1,Temple University,0,Hatfield Ice Arena (PA),Final,0,1
+26,11/8/2024,West Chester University,8,Towson University,0,Ice Line Quad Rinks (PA),Final,0,2
+27,11/8/2024,Lehigh University,3,William Paterson University,4,Steel Ice Center (PA),Final,0,1
+28,11/9/2024,New York University,8,Towson University,4,Sky Rink at Chelsea Piers (NY),Final,0,1
+29,11/9/2024,West Chester University,3,Temple University,2,Ice Line Quad Rinks (PA),Final,0,1
+30,11/9/2024,William Paterson University,2,Lehigh University,5,Ice Vault Arena (NJ),Final,0,2
+31,11/10/2024,Towson University,2,New York University,7,Ice World (MD),Final,0,2
+32,11/15/2024,United States Naval Academy,3,Villanova University,2,McMullen Hockey Arena (MD),Final,0,2
+33,11/15/2024,New York University,4,Temple University,5,Sky Rink at Chelsea Piers (NY),Final,0,1
+34,11/15/2024,Lehigh University,2,West Chester University,5,Steel Ice Center (PA),Final,0,1
+35,11/16/2024,Villanova University,5,Lehigh University,3,Hatfield Ice Arena (PA),Final,0,2
+36,11/16/2024,United States Naval Academy,4,West Chester University,3,McMullen Hockey Arena (MD),Final,0,1
+37,11/16/2024,Temple University,4,New York University,2,Northeast Skate Zone (PA),Final,0,2
+38,11/22/2024,United States Naval Academy,8,Towson University,1,McMullen Hockey Arena (MD),Final,0,1
+39,11/22/2024,West Chester University,8,New York University,0,Ice Line Quad Rinks (PA),Final,0,1
+40,11/22/2024,Lehigh University,5,Temple University,1,Steel Ice Center (PA),Final,0,2
+41,11/23/2024,Towson University,1,United States Naval Academy,5,Ice World (MD),Final,0,2
+42,11/23/2024,New York University,3,West Chester University,6,Sky Rink at Chelsea Piers (NY),Final,0,2
+43,12/6/2024,New York University,1,William Paterson University,4,Sky Rink at Chelsea Piers (NY),Final,0,1
+44,12/7/2024,William Paterson University,6,New York University,3,Ice Vault Arena (NJ),Final,0,2
+45,1/10/2024,Villanova University,,West Chester University,,Hatfield Ice Arena (PA),4:45 pm EST,,1
+46,1/10/2024,Lehigh University,,Towson University,,Spring Mountain Ice (PA),9:15 pm EST,,1
+47,1/11/2024,Temple University,,Towson University,,Northeast Skate Zone (PA),8:00 pm EST,,2
+48,1/17/2024,Villanova University,,Towson University,,Hatfield Ice Arena (PA),4:45 pm EST,,1
+49,1/17/2024,United States Naval Academy,,George Mason University,,McMullen Hockey Arena (MD),7:00 pm EST,,1
+50,1/17/2024,William Paterson University,,Temple University,,Ice Vault Arena (NJ),8:30 pm EST,,2
+51,1/18/2024,George Mason University,,United States Naval Academy,,Prince William Ice Center (VA),8:25 pm EST,,2
+52,1/23/2024,West Chester University,,Villanova University,,Ice Line Quad Rinks (PA),8:00 pm EST,,2
+53,1/24/2024,United States Naval Academy,,Lehigh University,,McMullen Hockey Arena (MD),7:00 pm EST,,2
+54,1/24/2024,Towson University,,Villanova University,,Ice World (MD),7:50 pm EST,,2
+55,1/24/2024,George Mason University,,William Paterson University,,Prince William Ice Center (VA),8:35 pm EST,,2
+56,1/24/2024,Temple University,,West Chester University,,Northeast Skate Zone (PA),8:40 pm EST,,2
+57,1/25/2024,United States Naval Academy,,William Paterson University,,McMullen Hockey Arena (MD),5:30 pm EST,,2
+58,1/25/2024,Temple University,,Villanova University,,Northeast Skate Zone (PA),8:00 pm EST,,2
+59,1/25/2024,George Mason University,,Lehigh University,,Prince William Ice Center (VA),9:05 pm EST,,2
+60,1/26/2024,Towson University,,Lehigh University,,Ice World (MD),12:20 pm EST,,2
+61,1/31/2024,George Mason University,,Temple University,,Prince William Ice Center (VA),8:25 pm EST,,1
+62,1/31/2024,West Chester University,,United States Naval Academy,,Ice Line Quad Rinks (PA),8:30 pm EST,,2
+63,1/31/2024,New York University,,Villanova University,,Sky Rink at Chelsea Piers (NY),9:00 pm EST,,1
+64,2/1/2024,West Chester University,,George Mason University,,Ice Line Quad Rinks (PA),2:30 pm EST,,2
+65,2/1/2024,Villanova University,,New York University,,Hatfield Ice Arena (PA),5:30 pm EST,,2
+66,2/1/2024,United States Naval Academy,,Temple University,,McMullen Hockey Arena (MD),5:30 pm EST,,2
+67,2/7/2024,George Mason University,,Villanova University,,Prince William Ice Center (VA),8:25 pm EST,,2
+68,2/7/2024,West Chester University,,William Paterson University,,Ice Line Quad Rinks (PA),8:45 pm EST,,2
+69,2/8/2024,Temple University,,George Mason University,,Northeast Skate Zone (PA),8:00 pm EST,,2
+70,2/8/2024,West Chester University,,Lehigh University,,Ice Line Quad Rinks (PA),8:15 pm EST,,2
+71,2/14/2024,George Mason University,,New York University,,Prince William Ice Center (VA),8:25 pm EST,,1
+72,2/15/2024,George Mason University,,New York University,,Prince William Ice Center (VA),11:55 am EST,,2
