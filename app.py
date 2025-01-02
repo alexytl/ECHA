@@ -52,24 +52,26 @@ def main():
     
     #graphing
     st.header("Graphs")
-    st.subheader("currently displaying incorrectly!")
     x = st.selectbox("Select x-axis: ", stats)
     y = st.selectbox("Select y-axis: ", stats)
+    x_ranked = rank_methods[x]()
+    y_ranked = rank_methods[y]()
     
-    x_data = [value for _, value in rank_methods[x]()]
-    y_data = [value for _, value in rank_methods[y]()]
-    team_names = [team for team, _ in rank_methods[x]()]
+    ys = {team: value for team, value in y_ranked}
+    data = []
+    for team, x_value in x_ranked:
+        data.append((team, x_value, ys[team]))
+    teams, x_data, y_data = zip(*data)
     
-    if x_data and y_data:
-        fig, ax = plt.subplots()
-        ax.scatter(x_data, y_data)
-        for i, team in enumerate(team_names):
-            ax.text(x_data[i], y_data[i], team, fontsize=8)
-    
-        ax.set_xlabel(x)
-        ax.set_ylabel(y)
-        ax.set_title(f"{y} vs {x}")
-        st.pyplot(fig)
+    fig, ax = plt.subplots()
+    ax.scatter(x_data, y_data)
+    for i, team in enumerate(team):
+        ax.text(x_data[i], y_data[i], team, fontsize=8)
+        
+    ax.set_xlabel(x)
+    ax.set_ylabel(y)
+    ax.set_title(f"{y} vs {x}")
+    st.pyplot(fig)
         
     
 if __name__ == "__main__":
