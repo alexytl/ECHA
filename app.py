@@ -21,3 +21,6 @@ def main():
         standings_data = standings.standings()
         standings_df = pd.DataFrame(standings_data)
         st.dataframe(standings_df)
+
+if __name__ == "__main__":
+    main()
