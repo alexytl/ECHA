@@ -19,8 +19,10 @@ def main():
         
         st.header("ECHA Standings")
         standings_data = standings.standings()
-        standings_df = pd.DataFrame(standings_data)
+        ranked_data = [{"Rank": rank + 1, **team_data} for rank, 
+                       team_data in enumerate(standings_data)]
+        standings_df = pd.DataFrame(ranked_data)
         st.dataframe(standings_df)
-
+        
 if __name__ == "__main__":
     main()
