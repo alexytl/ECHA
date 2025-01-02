@@ -70,11 +70,7 @@ class Standings2:
             gf[team.name] = team.get_gf_per()
             
         sorted_gf = sorted(gf.items(), key = lambda x: x[1], reverse = True)
-        
-        print(f"{'Team':<28} {'GF Per Game':<12}")
-        print("-" * 45)
-        for rank, (team, gf_per) in enumerate(sorted_gf, start = 1):
-            print(f"{rank:<3} {team:<30} {gf_per:.3f}")
+        return sorted_gf
             
     def ga_per_ranked(self):
         ga = {}
@@ -82,11 +78,7 @@ class Standings2:
             ga[team.name] = team.get_ga_per()
             
         sorted_ga = sorted(ga.items(), key = lambda x: x[1], reverse = False)
-        
-        print(f"{'Team':<28} {'GA Per Game':<12}")
-        print("-" * 45)
-        for rank, (team, ga_per) in enumerate(sorted_ga, start = 1):
-            print(f"{rank:<3} {team:<30} {ga_per:.3f}")
+        return sorted_ga
             
     def gd_per_ranked(self):
         gd = {}
@@ -94,23 +86,15 @@ class Standings2:
             gd[team.name] = team.get_gd_per()
             
         sorted_gd = sorted(gd.items(), key = lambda x: x[1], reverse = True)
-
-        print(f"{'Team':<28} {'GD Per Game':<12}")
-        print("-" * 45)
-        for rank, (team, gd_per) in enumerate(sorted_gd, start = 1):
-            print(f"{rank:<3} {team:<30} {gd_per:.3f}")
+        return sorted_gd
         
     def pe_ranked(self):
-        pes = {}
+        pe = {}
         for team in self.teams:
-            pes[team.name] = team.get_pe()
+            pe[team.name] = team.get_pe()
             
-        sorted_pes = sorted(pes.items(), key = lambda x: x[1], reverse = True)
-        
-        print(f"{'Team':<21} {'Pythagorean Expectation':<12}")
-        print("-" * 45)
-        for rank, (team, pe) in enumerate(sorted_pes, start = 1):
-            print(f"{rank:<3} {team:<30} {pe:.3f}")
+        sorted_pe = sorted(pe.items(), key = lambda x: x[1], reverse = True)
+        return sorted_pe
             
     def win_pct_ranked(self):
         wp = {}
@@ -118,11 +102,7 @@ class Standings2:
             wp[team.name] = team.get_win_pct()
             
         sorted_wp = sorted(wp.items(), key = lambda x: x[1], reverse = True)
-        
-        print(f"{'Team':<29} {'Win Percentage':<12}")
-        print("-" * 45)
-        for rank, (team, win) in enumerate(sorted_wp, start = 1):
-            print(f"{rank:<3} {team:<30} {win:.3f}")
+        return sorted_wp
             
     def points_per_ranked(self):
         ppg = {}
@@ -130,30 +110,19 @@ class Standings2:
             ppg[team.name] = team.get_points_per()
             
         sorted_ppg = sorted(ppg.items(), key = lambda x: x[1], reverse = True)
-        """
-        print(f"{'Team':<28} {'Points Per Game':<12}")
-        print("-" * 45)
-        for rank, (team, pts_per) in enumerate(sorted_ppg, start = 1):
-            print(f"{rank:<3} {team:<30} {pts_per:.3f}")
-        """
         return sorted_ppg
             
     def max_points_ranked(self):
-        max = {}
+        mp = {}
         for team in self.teams:
-            max[team.name] = team.get_max_points()
+            mp[team.name] = team.get_max_points()
             
-        sorted_max = sorted(max.items(), key = lambda x: x[1], reverse = True)
-        
-        print(f"{'Team':<21} {'Maximum Possible Points':<12}")
-        print("-" * 45)
-        for rank, (team, mp) in enumerate(sorted_max, start = 1):
-            print(f"{rank:<3} {team:<30} {mp:.3f}")
+        sorted_mp = sorted(mp.items(), key = lambda x: x[1], reverse = True)
+        return sorted_mp
     
         
     def sos_ranked(self, games):
         sos = {}
-        
         for team in self.teams:
             opps = []
             for game in games:
@@ -191,15 +160,5 @@ class Standings2:
             sos[team.name] = ((3 * owp) + (0 * oowp)) / 3
             
         sorted_sos = sorted(sos.items(), key = lambda x: x[1], reverse = True)
-        """
-        print(f"{'Team':<35} {'SOS':<10}")
-        print("-" * 45)
-        for rank, (team, value) in enumerate(sorted_sos, start = 1):
-            print(f"{rank:<3} {team:<30} {value:.3f}")
-        """
         return sorted_sos
-        
-                    
-            
-        
         
