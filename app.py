@@ -52,6 +52,7 @@ def main():
     
     #graphing
     st.header("Graphs")
+    st.subheader("currently displaying incorrectly!")
     x = st.selectbox("Select x-axis: ", stats)
     y = st.selectbox("Select y-axis: ", stats)
     
