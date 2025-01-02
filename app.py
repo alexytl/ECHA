@@ -21,7 +21,7 @@ def main():
         standings_data = standings.standings()
         ranked_data = [{"#": rank + 1, **team_data} for rank, 
                        team_data in enumerate(standings_data)]
-        standings_df = pd.DataFrame(ranked_data)
+        standings_df = pd.DataFrame(ranked_data).set_index("#")
         st.dataframe(standings_df)
         
 if __name__ == "__main__":
