@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
 from standings_2 import Standings2
 from game_reader_2 import GameReader2
 
@@ -16,7 +17,7 @@ def main():
     standings = Standings2(teams)
         
     #standings
-    st.header("ECHA Standings")
+    st.header("Standings")
     standings_data = standings.standings()
     ranked_data = [{"#": rank + 1, **team_data} for rank, 
                        team_data in enumerate(standings_data)]
@@ -24,7 +25,7 @@ def main():
     st.dataframe(standings_df)
         
     #rankings
-    st.header("Team Rankings")
+    st.header("Rankings")
     stats = ["Strength of Schedule", "Win Percentage", "Points Per Game",
              "Max Points", "Pythagorean Expectation", "GF Per Game", 
              "GA Per Game","GD Per Game"]
@@ -39,18 +40,36 @@ def main():
         "GA Per Game": lambda: standings.ga_per_ranked(),
         "GD Per Game": lambda: standings.gd_per_ranked(),
     }
-
     rank_method = rank_methods.get(selected)
     
     if rank_method:
         ranked_data = rank_method()
-        
         df = pd.DataFrame(
             [{"#": rank + 1, "Team": team, selected: round(value, 3)} 
              for rank, (team, value) in enumerate(ranked_data)]
         ).set_index("#")
-        
         st.dataframe(df)
+    
+    #graphing
+    st.header("Graphs")
+    x = st.selectbox("Select x-axis: ", stats)
+    y = st.selectbox("Select y-axis: ", stats)
+    
+    x_data = [value for _, value in rank_methods[x]()]
+    y_data = [value for _, value in rank_methods[y]()]
+    team_names = [team for team, _ in rank_methods[x]()]
+    
+    if x_data and y_data:
+        fig, ax = plt.subplots()
+        ax.scatter(x_data, y_data)
+        for i, team in enumerate(team_names):
+            ax.text(x_data[i], y_data[i], team, fontsize=8)
+    
+        ax.set_xlabel(x)
+        ax.set_ylabel(y)
+        ax.set_title(f"{y} vs {x}")
+        st.pyplot(fig)
+        
     
 if __name__ == "__main__":
     main()
