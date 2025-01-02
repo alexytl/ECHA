@@ -9,7 +9,7 @@ def main():
     if file:
         df = pd.read_csv(file)
         
-        game_reader = GameReader2(df)
+        game_reader = GameReader2()
         game_reader.read_csv(file)
         
         games = game_reader.get_games()
