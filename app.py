@@ -11,6 +11,7 @@ def main():
         
         game_reader = GameReader2(df)
         game_reader.read_csv(file)
+        
         games = game_reader.get_games()
         teams = game_reader.get_teams()
         standings = Standings2(teams)
