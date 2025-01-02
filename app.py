@@ -10,5 +10,15 @@ def main():
         df = pd.read_csv(file)
         
         game_reader = GameReader2(df)
-        home_records_df = pd.DataFrame(standings.home_records(games))
-        st.dataframe(home_records_df)
+        game_reader.read_csv(file)
+        games = game_reader.get_games()
+        teams = game_reader.get_teams()
+        standings = Standings2(teams)
+        
+        st.header("ECHA Standings")
+        standings_data = standings.standings()
+        standings_df = pd.DataFrame(standings_data)
+        st.dataframe(standings_df)
+        
+if __name__ == "__main__":
+    main()
