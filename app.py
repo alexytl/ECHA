@@ -65,7 +65,7 @@ def main():
     
     fig, ax = plt.subplots()
     ax.scatter(x_data, y_data)
-    for i, team in enumerate(team):
+    for i, team in enumerate(teams):
         ax.text(x_data[i], y_data[i], team, fontsize=8)
         
     ax.set_xlabel(x)
