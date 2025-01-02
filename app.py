@@ -51,6 +51,8 @@ def main():
         ).set_index("#")
         
         st.dataframe(df)
+        st.write("Debug: ranked_data:", ranked_data)
+
      
     st.header("Debug: Win Percentage")
     for team in teams.values():
