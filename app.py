@@ -7,10 +7,11 @@ def main():
     st.title("ECHA Stats App")
     file = st.file_uploader("Upload CSV File", type="csv")
     if file:
-        df = pd.read_csv(file)
+        with open("echa.csv", "wb") as f:
+            f.write(file.getbuffer())
         
         game_reader = GameReader2()
-        game_reader.read_csv(file)
+        game_reader.read_csv("echa.csv")
         
         games = game_reader.get_games()
         teams = game_reader.get_teams()
