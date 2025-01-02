@@ -51,18 +51,6 @@ def main():
         ).set_index("#")
         
         st.dataframe(df)
-        st.write("Debug: ranked_data:", ranked_data)
-
-     
-    st.header("Debug: Win Percentage")
-    for team in teams.values():
-        st.write(f"{team.name}: {team.get_win_pct()}")
-
-    st.write("Debug: win_pct_ranked")
-    st.write(standings.win_pct_ranked())
-
-
-        
     
 if __name__ == "__main__":
     main()
