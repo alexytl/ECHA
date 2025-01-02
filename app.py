@@ -29,18 +29,21 @@ def main():
              "Max Points", "Pythagorean Expectation", "GF Per Game", 
              "GA Per Game","GD Per Game"]
     selected = st.selectbox("Rank Teams By: ", stats)
-    rank_methods = {"Strength of Schedule": standings.sos_ranked(games), 
-                     "Win Percentage": standings.win_pct_ranked(games),
-                     "Points Per Game": standings.points_per_ranked(games),
-                     "Max Points": standings.max_points_ranked(games),
-                     "Pythagorean Expectation": standings.pe_ranked(games),
-                     "GF Per Game": standings.gf_per_ranked(games),
-                     "GA Per Game": standings.ga_per_ranked(games),
-                     "GD Per Game": standings.gd_per_ranked(games)}
+    rank_methods = {
+        "Strength of Schedule": lambda: standings.sos_ranked(games),
+        "Win Percentage": lambda: standings.win_pct_ranked(games),
+        "Points Per Game": lambda: standings.points_per_ranked(games),
+        "Max Points": lambda: standings.max_points_ranked(games),
+        "Pythagorean Expectation": lambda: standings.pe_ranked(games),
+        "GF Per Game": lambda: standings.gf_per_ranked(games),
+        "GA Per Game": lambda: standings.ga_per_ranked(games),
+        "GD Per Game": lambda: standings.gd_per_ranked(games),
+    }
+
     rank_method = rank_methods.get(selected)
     
     if rank_method:
-        ranked_data = rank_method(games)
+        ranked_data = rank_method()
         
         df = pd.DataFrame(
             [{"#": rank + 1, "Team": team, selected: round(value, 3)} 
