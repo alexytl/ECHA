@@ -31,13 +31,13 @@ def main():
     selected = st.selectbox("Rank Teams By: ", stats)
     rank_methods = {
         "Strength of Schedule": lambda: standings.sos_ranked(games),
-        "Win Percentage": lambda: standings.win_pct_ranked(games),
-        "Points Per Game": lambda: standings.points_per_ranked(games),
-        "Max Points": lambda: standings.max_points_ranked(games),
-        "Pythagorean Expectation": lambda: standings.pe_ranked(games),
-        "GF Per Game": lambda: standings.gf_per_ranked(games),
-        "GA Per Game": lambda: standings.ga_per_ranked(games),
-        "GD Per Game": lambda: standings.gd_per_ranked(games),
+        "Win Percentage": lambda: standings.win_pct_ranked(),
+        "Points Per Game": lambda: standings.points_per_ranked(),
+        "Max Points": lambda: standings.max_points_ranked(),
+        "Pythagorean Expectation": lambda: standings.pe_ranked(),
+        "GF Per Game": lambda: standings.gf_per_ranked(),
+        "GA Per Game": lambda: standings.ga_per_ranked(),
+        "GD Per Game": lambda: standings.gd_per_ranked(),
     }
 
     rank_method = rank_methods.get(selected)
