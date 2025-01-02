@@ -51,6 +51,16 @@ def main():
         ).set_index("#")
         
         st.dataframe(df)
+        
+        
+    st.write("Win Percentage Test:", standings.win_pct_ranked())
+    st.write("Points Per Game Test:", standings.points_per_ranked())
+    st.write("GF Per Game Test:", standings.gf_per_ranked())
+    st.write("GA Per Game Test:", standings.ga_per_ranked())
+    st.write("GD Per Game Test:", standings.gd_per_ranked())
+    st.write("Max Points Test:", standings.max_points_ranked())
+    st.write("Pythagorean Expectation Test:", standings.pe_ranked())
+        
     
 if __name__ == "__main__":
     main()
