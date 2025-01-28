@@ -1,24 +1,13 @@
-import subprocess
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from standings_2 import Standings2
 from game_reader_2 import GameReader2
 
-github_token = st.secrets["GITHUB_TOKEN"]
-
-repo_url = f"https://{github_token}@github.com/alexytl/echa.git"
-
-try:
-    subprocess.run(["git", "clone", repo_url], check=True)
-    st.success("Repository cloned successfully!")
-except subprocess.CalledProcessError as e:
-    st.error(f"Failed to clone repository: {e}")
-
-path = ".devcontainer/tank.csv"
+path = ".devcontainer/rio.csv"
 
 def main():
-    st.title("ECHA Stats App")
+    st.title("ECHA Stats App (JAN UPDATE)")
   
     #boring stuff
     game_reader = GameReader2()
