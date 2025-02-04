@@ -1,4 +1,7 @@
-import streamlit as st
 import os
+import streamlit as st
 
-st.write(f"Current working directory: {os.getcwd()}")
+path = ".devcontainer/dex.csv"
+file_exists = os.path.exists(path)
+
+st.write(f"Does the file exist? {file_exists}")
