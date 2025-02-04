@@ -16,6 +16,7 @@ def main():
 
     if teams:
         first_team = teams[0]
+        st.write("Type of first team object:", type(first_team))  # Check type
         st.write("First Team Object:", first_team)
         st.write("Available Attributes & Methods:", dir(first_team))
     else:
