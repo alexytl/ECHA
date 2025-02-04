@@ -1,10 +1,3 @@
-import streamlit as st
-import pandas as pd
-from team import Team
-from game_reader_2 import GameReader2
-
-path = ".devcontainer/dex.csv"
-
 def main():
     st.title("Playoffs")
     
@@ -12,12 +5,15 @@ def main():
     game_reader.read_csv(path)
     teams = game_reader.get_teams()
     
-    #picture section
+    # Debug: Print the teams to check if they are loaded correctly
+    st.write(f"Loaded teams: {[team.get_name() for team in teams]}")
+
+    # Picture section
     st.header("Playoff Picture")
 
     all_pts = {team.get_name(): team.get_points() for team in teams}
     all_mp = {team.get_name(): team.get_max_points() for team in teams}
-    
+
     data = []
     for team in teams:
         status = " "
@@ -26,12 +22,12 @@ def main():
         gp = team.get_gp()
         gd = team.get_gd()
         mp = team.get_max_points()
-        
+
         fs_above = sum(pts > all_mp[other] 
                        for other in all_pts if other != name)
         fs_below = sum(mp < all_pts[other] 
                        for other in all_mp if other != name)
-        
+
         if fs_below >= 6:
             status = "e"
         elif fs_above == 8:
@@ -40,9 +36,9 @@ def main():
             status = "y"
         elif fs_above >= 3:
             status = "x"
-        
+
         data.append([status, team, gp, pts, gd])
-            
+
     picture_df = pd.DataFrame(data, 
                               columns=["Status", "Team", "GP", "PTS", "GD"])
     
@@ -55,6 +51,3 @@ def main():
     st.markdown("y = Clinched Quarterfinal Bye")
     st.markdown("x = Clinched Playoff Birth")
     st.markdown("e = Eliminated From Playoff Contention")
-    
-if __name__ == "__main__":
-    main()
