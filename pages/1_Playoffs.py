@@ -16,6 +16,7 @@ def main():
     
     # Picture section
     st.header("Playoff Picture")
+    st.markdown("Currently Not Functional ):")
 
     all_pts = {team.get_name(): team.get_points() for team in teams.values()}
     all_mp = {team.get_name(): team.get_points() for team in teams.values()}
