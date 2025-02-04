@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
-import sys
-import os
+from team import Team
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from game_reader_2 import GameReader2
