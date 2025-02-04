@@ -8,7 +8,7 @@ path = ".devcontainer/dex.csv"
 
 def main():
     st.title("ECHA Stats App")
-    st.markdown("Last Updated: February 4, 2025)
+    st.markdown("Last Updated: February 4, 2025")
   
     #boring stuff
     game_reader = GameReader2()
