@@ -6,7 +6,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from game_reader_2 import GameReader2
 
-path = "../.devcontainer/dex.csv"
+path = "/.devcontainer/dex.csv"
 
 def main():
     st.title("Playoffs")
