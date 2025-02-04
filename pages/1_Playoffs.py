@@ -16,7 +16,7 @@ def main():
     
     # Picture section
     st.header("Playoff Picture")
-    st.markdown("Currently Not Functional ):")
+    st.markdown("*currently not functional ):")
 
     all_pts = {team.get_name(): team.get_points() for team in teams.values()}
     all_mp = {team.get_name(): team.get_points() for team in teams.values()}
@@ -37,22 +37,26 @@ def main():
         
         if fs_below >= 6:
             status = "e"
-        elif fs_above == 8:
-            status = "z"
         elif fs_above >= 7:
             status = "y"
         elif fs_above >= 3:
             status = "x"
+        elif fs_above == 8:
+            status = "z"
         
         data.append([status, name, gp, pts, gd])
             
     picture_df = pd.DataFrame(data, 
                               columns=["Status", "Team", "GP", "PTS", "GD"])
-    
     picture_df.sort_values(by=["PTS", "GD"], 
                            ascending=[False, False], inplace=True)
-
-    st.dataframe(picture_df)
+    ranked_data = [{"#": rank + 1, "Status": row[0], "Team": row[1], 
+                    "GP": row[2], "PTS": row[3], "GD": row[4]} for rank, 
+                   row in enumerate(picture_df.values)]
+    final_df = pd.DataFrame(ranked_data).set_index("#")
+    
+    
+    st.dataframe(final_df)
     st.markdown("Legend:")
     st.markdown("z = Clinched Conference/Nationals Auto-Bid")
     st.markdown("y = Clinched Quarterfinal Bye")
