@@ -19,7 +19,7 @@ def main():
     st.markdown("*currently not functional ):")
 
     all_pts = {team.get_name(): team.get_points() for team in teams.values()}
-    all_mp = {team.get_name(): team.get_points() for team in teams.values()}
+    all_mp = {team.get_name(): team.get_max_points() for team in teams.values()}
     
     data = []
     for team in teams.values():
