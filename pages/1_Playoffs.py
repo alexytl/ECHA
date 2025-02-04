@@ -3,7 +3,7 @@ import pandas as pd
 from team import Team
 from game_reader_2 import GameReader2
 
-path = "/echa/.devcontainer/dex.csv"
+path = "./.devcontainer/dex.csv"
 
 def main():
     st.title("Playoffs")
