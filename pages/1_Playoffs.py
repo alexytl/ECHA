@@ -34,6 +34,10 @@ def main():
         fs_below = sum(mp < all_pts[other] 
                        for other in all_mp if other != name)
         
+        print(name)
+        for team in fs_above.values():
+            print(team.get_name())
+        
         if fs_below >= 6:
             status = "e"
         elif fs_above == 8:
