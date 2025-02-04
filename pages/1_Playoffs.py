@@ -30,9 +30,9 @@ def main():
         mp = team.get_max_points()
         
         fs_above = sum(pts > all_mp[other] 
-                       for other in all_pts if other != team)
+                       for other in all_pts if other != name)
         fs_below = sum(mp < all_pts[other] 
-                       for other in all_mp if other != team)
+                       for other in all_mp if other != name)
         
         if fs_below >= 6:
             status = "e"
