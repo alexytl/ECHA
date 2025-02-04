@@ -14,17 +14,14 @@ def main():
     game_reader.read_csv(path)
     teams = game_reader.get_teams()
     
-    # Debug: Print the teams to check if they are loaded correctly
-    st.write(f"Loaded teams: {[team.get_name() for team in teams]}")
-    
     # Picture section
     st.header("Playoff Picture")
 
-    all_pts = {team.get_name(): team.get_points() for team in teams}
-    all_mp = {team.get_name(): team.get_max_points() for team in teams}
+    all_pts = {team.get_name(): team.get_points() for team in teams.values()}
+    all_mp = {team.get_name(): team.get_points() for team in teams.values()}
     
     data = []
-    for team in teams:
+    for team in teams.values():
         status = " "
         name = team.get_name()
         pts = team.get_points()
@@ -32,16 +29,10 @@ def main():
         gd = team.get_gd()
         mp = team.get_max_points()
         
-        # Debugging the points and max points of each team
-        st.write(f"Processing Team: {name}, PTS: {pts}, MP: {mp}, GP: {gp}, GD: {gd}")
-        
         fs_above = sum(pts > all_mp[other] 
                        for other in all_pts if other != name)
         fs_below = sum(mp < all_pts[other] 
                        for other in all_mp if other != name)
-        
-        # Debugging the calculated values of fs_above and fs_below
-        st.write(f"fs_above: {fs_above}, fs_below: {fs_below}")
         
         if fs_below >= 6:
             status = "e"
@@ -52,9 +43,6 @@ def main():
         elif fs_above >= 3:
             status = "x"
         
-        # Debugging the status after calculation
-        st.write(f"Status for {name}: {status}")
-        
         data.append([status, team, gp, pts, gd])
             
     picture_df = pd.DataFrame(data, 
@@ -62,9 +50,6 @@ def main():
     
     picture_df.sort_values(by=["PTS", "GD"], 
                            ascending=[False, False], inplace=True)
-    
-    # Debugging the generated DataFrame
-    st.write("Picture DataFrame:", picture_df)
 
     st.dataframe(picture_df)
     st.markdown("Legend:")
