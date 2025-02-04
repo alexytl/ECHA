@@ -7,3 +7,6 @@ def main():
   st.header("In Progress")
   st.markdown("Sooner: Playoff Bracket, Playoff Matchup Guide, Home/Away Splits, First/Second Matchup Splits, Away Rink Stats, Enhanced Graphing Capabilities")
   st.markdown("Later: Player Statistics, Predictive Model")
+
+if __name__ == "__main__":
+    main()
