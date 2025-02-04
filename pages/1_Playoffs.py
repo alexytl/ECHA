@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 from team import Team
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from game_reader_2 import GameReader2
 
 path = "/echa/.devcontainer/dex.csv"
