@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from game_reader_2 import GameReader2
+import os
 from team import Team  # Assuming Team is defined in your team.py file
 
 # Define a path to the file for testing purposes
