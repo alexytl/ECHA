@@ -4,10 +4,11 @@ import matplotlib.pyplot as plt
 from standings_2 import Standings2
 from game_reader_2 import GameReader2
 
-path = ".devcontainer/rio.csv"
+path = ".devcontainer/dex.csv"
 
 def main():
-    st.title("ECHA Stats App (JAN UPDATE)")
+    st.title("ECHA Stats App")
+    st.markdown("Last Updated: February 4, 2025)
   
     #boring stuff
     game_reader = GameReader2()
