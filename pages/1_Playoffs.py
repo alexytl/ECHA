@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from game_reader_2 import GameReader2
 
-path = "../.devcontainer/dex.csv"
+path = "/.devcontainer/dex.csv"
 
 def main():
     st.title("Playoffs")
