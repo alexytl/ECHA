@@ -138,7 +138,7 @@ class Team:
         return gf_pythd / (gf_pythd + ga_pythd)
     
     def get_max_points(self):
-        return self.points + 3 * (18 - self.games_p)
+        return self.points + 3 * (16 - self.games_p)
     
     #basic getters
     def get_name(self):
