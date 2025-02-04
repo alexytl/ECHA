@@ -11,7 +11,7 @@ def main():
     st.markdown("Last Updated: February 4, 2025")
 
     image_url = ".devcontainer/logo.png"
-    st.logo(image_url)
+    st.logo(image_url, large)
     
     #boring stuff
     game_reader = GameReader2()
