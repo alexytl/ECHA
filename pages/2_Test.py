@@ -1,8 +1,9 @@
-import os
+import pandas as pd
 import streamlit as st
 
 try:
-    with open(".devcontainer/dex.csv", 'r', encoding='utf-8') as file:
-        st.write("File is accessible!")
+    data = pd.read_csv(".devcontainer/dex.csv")
+    st.write("CSV loaded successfully!")
+    st.write(data.head())  # Show first few rows
 except Exception as e:
-    st.write(f"Error opening file: {e}")
+    st.write(f"Error loading CSV: {e}")
