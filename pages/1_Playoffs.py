@@ -30,9 +30,9 @@ def main():
         mp = team.get_max_points()
         
         fs_above = sum(pts > all_mp[other] 
-                       for other in all_pts if other != name)
+                       for other in all_pts if other != team)
         fs_below = sum(mp < all_pts[other] 
-                       for other in all_mp if other != name)
+                       for other in all_mp if other != team)
         
         if fs_below >= 6:
             status = "e"
@@ -43,7 +43,7 @@ def main():
         elif fs_above >= 3:
             status = "x"
         
-        data.append([status, team, gp, pts, gd])
+        data.append([status, name, gp, pts, gd])
             
     picture_df = pd.DataFrame(data, 
                               columns=["Status", "Team", "GP", "PTS", "GD"])
@@ -53,7 +53,7 @@ def main():
 
     st.dataframe(picture_df)
     st.markdown("Legend:")
-    st.markdown("z = Clinched Conference/National Bid")
+    st.markdown("z = Clinched Conference/Nationals Auto-Bid")
     st.markdown("y = Clinched Quarterfinal Bye")
     st.markdown("x = Clinched Playoff Birth")
     st.markdown("e = Eliminated From Playoff Contention")
