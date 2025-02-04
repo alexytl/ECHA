@@ -1,6 +1,6 @@
 import streamlit as st
 from game_reader_2 import GameReader2
-from team import Team
+from team import Team  # Adjust if necessary
 
 path = ".devcontainer/dex.csv"
 
@@ -11,12 +11,15 @@ def main():
     game_reader.read_csv(path)  
     teams = game_reader.get_teams()
 
-    st.write("Teams loaded:")
+    # Check if teams list is empty
+    st.write("Number of teams:", len(teams))
 
     if teams:
         first_team = teams[0]
         st.write("First Team Object:", first_team)
         st.write("Available Attributes & Methods:", dir(first_team))
+    else:
+        st.write("No teams loaded.")
 
 if __name__ == "__main__":
     main()
