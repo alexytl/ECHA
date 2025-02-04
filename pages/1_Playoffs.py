@@ -2,8 +2,10 @@ import streamlit as st
 import pandas as pd
 from team import Team
 from game_reader_2 import GameReader2
+import os
 
-path = "./.devcontainer/dex.csv"
+path = os.path.join(os.getcwd(), '.devcontainer', 'dex.csv')
+
 
 def main():
     st.title("Playoffs")
