@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from game_reader_2 import GameReader2
 
-path = ".devcontainer/dex.csv"
+path = "../.devcontainer/dex.csv"
 
 def main():
     st.title("Playoffs")
@@ -49,3 +49,11 @@ def main():
                            ascending=[False, False], inplace=True)
             
     st.dataframe(picture_df)
+    st.markdown("Legend:")
+    st.markdown("z = Clinched Conference/National Bid"
+    st.markdown("y = Clinched Quarterfinal Bye")
+    st.markdown("x = Clinched Playoff Birth"
+    st.markdown("e = Eliminated From Playoff Contention")
+    
+if __name__ == "__main__":
+    main()
