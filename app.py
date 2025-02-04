@@ -9,7 +9,10 @@ path = ".devcontainer/dex.csv"
 def main():
     st.title("ECHA Stats App")
     st.markdown("Last Updated: February 4, 2025")
-  
+
+    image_url = "https://commons.wikimedia.org/wiki/File:Temple_University_Ice_Hockey_Club_Logo.png"
+    st.image(image_url, width=100)
+    
     #boring stuff
     game_reader = GameReader2()
     game_reader.read_csv(path)   
