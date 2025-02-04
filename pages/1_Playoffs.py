@@ -50,9 +50,9 @@ def main():
             
     st.dataframe(picture_df)
     st.markdown("Legend:")
-    st.markdown("z = Clinched Conference/National Bid"
+    st.markdown("z = Clinched Conference/National Bid")
     st.markdown("y = Clinched Quarterfinal Bye")
-    st.markdown("x = Clinched Playoff Birth"
+    st.markdown("x = Clinched Playoff Birth")
     st.markdown("e = Eliminated From Playoff Contention")
     
 if __name__ == "__main__":
