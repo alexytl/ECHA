@@ -29,14 +29,10 @@ def main():
         gd = team.get_gd()
         mp = team.get_max_points()
         
-        fs_above = sum(pts > all_mp[other] 
-                       for other in all_pts if other != name)
-        fs_below = sum(mp < all_pts[other] 
-                       for other in all_mp if other != name)
-        
-        print(name)
-        for team in fs_above:
-            print(team.get_name())
+        fs_above = sum(1 for other in all_mp if pts > all_mp[other]
+                       and other != team)
+        fs_below = sum(1 for other in all_pts if mp < all_pts[other]
+                       and other != team)
         
         if fs_below >= 6:
             status = "e"
