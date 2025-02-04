@@ -31,7 +31,7 @@ def main():
 
     # Test if we have teams and they are valid objects (Team class should be well-defined)
     if teams:
-        for team in teams:
+        for team in teams.values():
             st.write(f"Team Name: {team.get_name()}")  # Ensure this method works in Team class
             st.write(f"Team Wins: {team.get_wins()}")
             st.write(f"Team Losses: {team.get_losses()}")
