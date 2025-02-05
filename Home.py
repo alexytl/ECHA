@@ -8,7 +8,7 @@ path = ".devcontainer/savage.csv"
 
 def main():
     st.title("ECHA Stats App")
-    st.icon("ice_hockey_stick_and_puck")
+    st.set_page_config(page_icon="ice_hockey_stick_and_puck")
     st.markdown("Made by Alex Lim")
     st.markdown("Last Updated: February 4, 2025")
     logo = ".devcontainer/logo.png"
