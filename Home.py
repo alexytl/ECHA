@@ -7,8 +7,8 @@ from game_reader_2 import GameReader2
 path = ".devcontainer/savage.csv"
 
 def main():
-    st.title("ECHA Stats App")
     st.set_page_config(page_icon="🏒")
+    st.title("ECHA Stats App")
     st.markdown("Made by Alex Lim")
     st.markdown("Last Updated: February 4, 2025")
     logo = ".devcontainer/logo.png"
