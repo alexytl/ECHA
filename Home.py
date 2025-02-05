@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from standings_2 import Standings2
 from game_reader_2 import GameReader2
 
-path = ".devcontainer/dex.csv"
+path = ".devcontainer/savage.csv"
 
 def main():
     st.title("ECHA Stats App")
