@@ -58,6 +58,12 @@ def main():
     st.markdown("z = Clinched Conference/Nationals Auto-Bid")
     st.markdown("x = Clinched Quarterfinals")
     st.markdown("p = Play-in Bound")
-    
+
+    #schedule section
+    st.header("Playoff Schedule")
+    st.markdown("Play-in Game @ Ice Line, West Chester, PA")
+    st.markdown(f"{standings_data[7].get_namme()} (8) vs. "
+                f"{standings_data[7].get_name()} (9)")
+
 if __name__ == "__main__":
     main()
