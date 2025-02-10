@@ -39,12 +39,12 @@ def main():
         
         if fs_below >= 6:
             status = "e"
+        elif fs_above == 8:
+            status = "z"
         elif fs_above >= 7:
             status = "y"
         elif fs_above >= 3:
             status = "x"
-        elif fs_above > 7:
-            status = "z"
         
         data.append([status, name, gp, pts, gd])
             
