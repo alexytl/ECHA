@@ -9,7 +9,7 @@ path = ".devcontainer/hurts.csv"
 def main():
     st.title("ECHA Stats App")
     st.markdown("Made by Alex Lim")
-    st.markdown("Last Updated: February 4, 2025")
+    st.markdown("Last Updated: February 9, 2025")
     logo = ".devcontainer/logo.png"
     st.logo(logo)
   
