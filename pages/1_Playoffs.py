@@ -34,14 +34,12 @@ def main():
         fs_below = sum(1 for other in all_pts if mp < all_pts[other]
                        and other != team)
         
-        if fs_below >= 6:
-            status = "e"
+        if fs_below >= 7:
+            status = "x"
         elif fs_above == 8:
             status = "z"
-        elif fs_above >= 7:
+        elif fs_above >= 2:
             status = "y"
-        elif fs_above >= 3:
-            status = "x"
         
         data.append([status, name, gp, pts, gd])
             
@@ -58,9 +56,8 @@ def main():
     st.dataframe(final_df)
     st.markdown("Legend:")
     st.markdown("z = Clinched Conference/Nationals Auto-Bid")
-    st.markdown("y = Clinched Quarterfinal Bye")
-    st.markdown("x = Clinched Playoff Birth")
-    st.markdown("e = Eliminated From Playoff Contention")
+    st.markdown("y = Clinched Quarterfinals")
+    st.markdown("x = Play-in Bound")
     
 if __name__ == "__main__":
     main()
