@@ -34,8 +34,8 @@ def main():
         fs_below = sum(1 for other in all_pts if mp < all_pts[other]
                        and other != team)
 
-        print(name)
-        print(fs_above)
+        st.markdown(name)
+        st.markdown(fs_above)
         
         if fs_below >= 6:
             status = "e"
