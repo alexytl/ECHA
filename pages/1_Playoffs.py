@@ -40,7 +40,7 @@ def main():
             status = "y"
         elif fs_above >= 3:
             status = "x"
-        elif fs_above == 8:
+        elif fs_above > 7:
             status = "z"
         
         data.append([status, name, gp, pts, gd])
