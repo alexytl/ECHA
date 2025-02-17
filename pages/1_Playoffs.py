@@ -4,7 +4,7 @@ from team import Team
 from game_reader_2 import GameReader2
 import os
 
-path = os.path.join(os.getcwd(), '.devcontainer', 'hurts.csv')
+path = os.path.join(os.getcwd(), '.devcontainer', 'o.csv')
 
 
 def main():
